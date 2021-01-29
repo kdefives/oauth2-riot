@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  php-fpm-riot-oauth2:
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    environment:
+      - APP_ENV=${APP_ENV}
+      - APP_SECRET=${APP_SECRET}
+    volumes:
+      - .:/var/www
