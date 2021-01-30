@@ -21,7 +21,7 @@ Declare parameters below in your knpu_oauth2_client.yaml:
 * url_token (eg.: https://riot.com/as/token.oauth2)
 * url_user_info (eg.: https://riot.com/idp/userinfo.openid)
 
-Example :
+Example for knpu_oauth2_client declaration :
 ```yaml
 # file : app\config\packages\knpu_oauth2_client.yaml
 
@@ -64,6 +64,8 @@ composer require kdefives/oauth2-riot
 ## Usage
 
 ### Authorization Code Flow example using Symfony 5.2.2
+
+#### Authenticator declaration:
 
 ```php
 <?php
@@ -175,6 +177,12 @@ class RiotAuthenticator extends SocialAuthenticator
     }
 }
 ```
+
+#### Controller declaration:
+TODO...
+
+#### Guard authenticator declaration (security.yaml)
+TODO...
 
 ## Testing
 
