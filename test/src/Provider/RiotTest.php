@@ -5,7 +5,6 @@ namespace League\OAuth2\Client\Test\Provider;
 use Eloquent\Phony\Phpunit\Phony;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Provider\Riot as RiotProvider;
-use League\OAuth2\Client\Provider\RiotUser;
 use League\OAuth2\Client\Token\AccessToken;
 use PHPUnit\Framework\TestCase;
 
@@ -20,9 +19,9 @@ class RiotTest extends TestCase
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
-            'url_authorization' => 'https://riot.com/as/authorization.oauth2',
-            'url_token' => 'https://riot.com/as/token.oauth2',
-            'url_user_info' => 'https://riot.com/idp/userinfo.openid'
+            'url_authorization' => 'https://local.com/as/authorization.oauth2',
+            'url_token' => 'https://local.com/as/token.oauth2',
+            'url_user_info' => 'https://local.com/idp/userinfo.openid'
         ]);
     }
 
@@ -53,9 +52,9 @@ class RiotTest extends TestCase
     {
         // Mock
         $response = [
-            'client_id' => '12345',
-            'uid' => 'toto123',
-            'exp' => 1597685985,
+            'puuid' => '12345azerty',
+            'gameName' => 'playerName',
+            'tagLine' => 'EUW',
         ];
 
         $token = $this->mockAccessToken();
@@ -74,15 +73,16 @@ class RiotTest extends TestCase
 
         $this->assertInstanceOf('League\OAuth2\Client\Provider\ResourceOwnerInterface', $user);
 
-        $this->assertEquals(12345, $user->getId());
-        $this->assertEquals('toto123', $user->getUid());
-        $this->assertEquals(1597685985, $user->getExpirationTimestamp());
+        $this->assertEquals('12345azerty', $user->getId());
+        $this->assertEquals('12345azerty', $user->getPuuid());
+        $this->assertEquals('playerName', $user->getGameName());
+        $this->assertEquals('EUW', $user->getTagLine());
 
         $user = $user->toArray();
 
-        $this->assertArrayHasKey('client_id', $user);
-        $this->assertArrayHasKey('uid', $user);
-        $this->assertArrayHasKey('exp', $user);
+        $this->assertArrayHasKey('puuid', $user);
+        $this->assertArrayHasKey('gameName', $user);
+        $this->assertArrayHasKey('tagLine', $user);
     }
 
     public function testErrorResponse()
@@ -105,7 +105,7 @@ class RiotTest extends TestCase
         $this->expectException(IdentityProviderException::class);
 
         // Execute
-        $user = $riot->getResourceOwner($token);
+        $riot->getResourceOwner($token);
 
         // Verify
         Phony::inOrder(

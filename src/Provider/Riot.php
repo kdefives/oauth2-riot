@@ -45,8 +45,8 @@ class Riot extends AbstractProvider
         // "openid" MUST be the first scope in the list.
         return [
             'openid',
-            'profile',
-            'email',
+            'cpid',
+            'offline_access'
         ];
     }
 

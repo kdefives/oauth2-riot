@@ -11,13 +11,14 @@ class RiotUserTest extends TestCase
     {
         // Mock
         $user = new RiotUser([
-            'client_id' => '12345',
-            'uid' => 'toto123',
-            'exp' => 1597685985,
+            'puuid' => '12345azerty',
+            'gameName' => 'playerName',
+            'tagLine' => 'EUW',
         ]);
 
-        $this->assertEquals(12345, $user->getId());
-        $this->assertEquals('toto123', $user->getUid());
-        $this->assertEquals(1597685985, $user->getExpirationTimestamp());
+        $this->assertEquals('12345azerty', $user->getId());
+        $this->assertEquals('12345azerty', $user->getPuuid());
+        $this->assertEquals('playerName', $user->getGameName());
+        $this->assertEquals('EUW', $user->getTagLine());
     }
 }

@@ -19,27 +19,37 @@ class RiotUser implements ResourceOwnerInterface
 
     public function getId()
     {
-        return $this->response['client_id'];
+        return $this->getPuuid();
     }
 
     /**
-     * Get the UID for the user
+     * Get the PUUID of player
      *
-     * @return string|null
+     * @return string
      */
-    public function getUid()
+    public function getPuuid()
     {
-        return $this->response['uid'];
+        return $this->response['puuid'];
     }
 
     /**
-     * Get the token expiration timestamp
+     * Get the GameName of player
      *
-     * @return int|null
+     * @return string
      */
-    public function getExpirationTimestamp()
+    public function getGameName()
     {
-        return $this->response['exp'];
+        return $this->response['gameName'];
+    }
+
+    /**
+     * Get the tagLine of player
+     *
+     * @return string
+     */
+    public function getTagLine()
+    {
+        return $this->response['tagLine'];
     }
 
     /**
