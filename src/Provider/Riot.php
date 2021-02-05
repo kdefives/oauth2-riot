@@ -52,7 +52,7 @@ class Riot extends AbstractProvider
 
     protected function getScopeSeparator()
     {
-        return ' ';
+        return '+';
     }
 
     protected function checkResponse(ResponseInterface $response, $data)
