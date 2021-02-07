@@ -16,7 +16,7 @@ jobs:
 
     - name: Setup PHP, with composer and extensions
       uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
-        with:
+      with:
         php-version: '7.4'
         #extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, mysql
         coverage: xdebug #optional
