@@ -1,4 +1,4 @@
-ARG PHP_VERSION=7.3.19-fpm
+ARG PHP_VERSION=7.4-fpm
 
 # base image
 FROM php:${PHP_VERSION} as base
