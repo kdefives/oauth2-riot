@@ -409,8 +409,9 @@ Style checks can be run with:
 composer check
 ```
 
-## How to contribute to this repo
-If you want to clone this repository locally you can do that (indeed, you must install docker):
+## How to contribute
+If you want to quickly clone, develop and test on your localhost. You can follow this steps below.
+Indeed, you must have git and docker (ie. Docker Desktop on Windows) to proceed.
 ```cli
 git clone ...
 cd oauth2/riot
