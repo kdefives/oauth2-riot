@@ -19,6 +19,7 @@ jobs:
       with:
         php-version: '7.4'
         extensions: xdebug-beta
+        ini-values: xdebug.coverage_enable=On
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -33,7 +34,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      #if: steps.composer-cache.outputs.cache-hit != 'true'
+      if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
