@@ -408,3 +408,14 @@ Style checks can be run with:
 ```sh
 composer check
 ```
+
+## How to contribute to this repo
+If you want to clone this repository locally you can do that (indeed, you must install docker):
+```cli
+git clone ...
+cd oauth2/riot
+docker-compose build
+docker-compose up -d php-fpm-riot-oauth2
+docker-compose exec php-fpm-riot-oauth2 bash
+composer test
+```
