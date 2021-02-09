@@ -62,7 +62,7 @@ composer require kdefives/oauth2-riot
 
 ## Usage
 
-Read this README documentation to know how to integrate this provider : [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle)
+Please find an usage example below. Read the README documentation of knpuniversity/oauth2-client-bundle to know how to integrate a provider : [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle)
 
 ### Authorization Code Flow example using Symfony 5.2.2 (tested with PHP-7.4)
 
