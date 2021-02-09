@@ -18,8 +18,8 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
-        #extensions: xdebug-beta
-        #ini-values: xdebug.coverage_enable=On
+        extensions: xdebug mbstring
+        ini-values: xdebug.coverage_enable=On
         coverage: xdebug
         tools: php-cs-fixer, phpunit
 
