@@ -1,7 +1,8 @@
 # oauth2-riot
 Riot (RSO) OAuth 2.0 support for the PHP League's OAuth 2.0 Client
 
-# Riot Provider for OAuth 2.0 Client [(based on Google Provider)](https://github.com/thephpleague/oauth2-google)
+# Riot Provider for OAuth 2.0 Client 
+Thanks to this [(Google Provider)](https://github.com/thephpleague/oauth2-google) used example.
 
 This package provides Riot OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
