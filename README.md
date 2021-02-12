@@ -2,9 +2,12 @@
 Riot (RSO) OAuth 2.0 support for the PHP League's OAuth 2.0 Client
 
 # Riot Provider for OAuth 2.0 Client 
-Thanks to this [(Google Provider)](https://github.com/thephpleague/oauth2-google) used example.
+*Thanks to this [(Google Provider)](https://github.com/thephpleague/oauth2-google) used as example to build this provider.*
 
 This package provides Riot OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+
+This package has been tested with this bundle: [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle).  
+Please find below a usage example using this bundle.
 
 The following versions of PHP are supported.
 
@@ -13,7 +16,8 @@ The following versions of PHP are supported.
 
 Package to authenticate users with Riot ID accounts using RSO (Riot Sign On).
 
-To use this package, it will be necessary to have a RSO account client ID and client
+**Note:**
+To implement Riot RSO, it will be necessary to have an RSO account client ID and client
 secret. These are referred in the RSO documentation : [https://www.riotgames.com/en/DevRel/rso](https://www.riotgames.com/en/DevRel/rso)
 
 ## Requirements
@@ -22,7 +26,7 @@ Declare parameters below in your knpu_oauth2_client.yaml:
 * url_token (eg.: https://riot.com/as/token.oauth2)
 * url_user_info (eg.: https://riot.com/idp/userinfo.openid)
 
-Example for knpu_oauth2_client declaration:
+Example for knpu_oauth2_client declaration using [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle):
 
 ```yaml
 # file : app\config\packages\knpu_oauth2_client.yaml
@@ -62,7 +66,7 @@ composer require kdefives/oauth2-riot
 
 ## Usage
 
-Please find an usage example below. Read the README documentation of knpuniversity/oauth2-client-bundle to know how to integrate a provider : [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle)
+Please find a usage example below. Read the README documentation of knpuniversity/oauth2-client-bundle to know how to integrate a provider : [https://github.com/knpuniversity/oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle)
 
 ### Authorization Code Flow example using Symfony 5.2.2 (tested with PHP-7.4)
 
