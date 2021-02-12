@@ -10,6 +10,15 @@
         "rso",
         "riot"
     ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Defives",
+            "email": "kevin.defives@gmail.com",
+            "homepage": "https://github.com/kdefives",
+            "role": "Developer"
+        }
+    ],
     "minimum-stability": "stable",
     "require": {
         "league/oauth2-client": "^2.0"
