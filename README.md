@@ -1,7 +1,7 @@
 # oauth2-riot
 Riot (RSO) OAuth 2.0 support for the PHP League's OAuth 2.0 Client
 
-- stable release version: ![version]
+- stable release version: ![version](https://img.shields.io/badge/version-1.0.0-blue)
 
 # Riot Provider for OAuth 2.0 Client 
 *Thanks to this [(Google Provider)](https://github.com/thephpleague/oauth2-google) used as example to build this provider.*
